@@ -1,0 +1,362 @@
+:root {
+    --background-color: rgb(25, 25, 28);
+    --primary-color: rgb(194, 186, 186);
+    --secondary-color: rgb(81, 91, 92);
+    --navbar-height: 10vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    margin-top: 10px;
+    margin-left: 30px;
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 8px;
+    padding: 8px 15px;
+    border-radius: 13px;
+    font-size: 1rem;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-size: 1.01rem;
+}
+
+nav ul li:hover {
+    background-color: rgb(96, 143, 76);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .right.show {
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.projects-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: left;
+    width: 30vw;
+    margin: 10px;
+}
+
+.project-card h3, .project-card p {
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    .projects-container {
+        margin: 0px;
+    }
+
+    .project-card {
+        background-color: var(--secondary-color);
+        padding: 1.5rem;
+        border-radius: 15px;
+        text-align: left;
+        width: 100vw;
+    }
+    
+} 
+
+
+
+/* :root {
+    --background-color: rgb(25, 25, 28);
+    --primary-color: rgb(194, 186, 186);
+    --secondary-color: rgb(81, 91, 92);
+    --font-size: 16px;
+    --navbar-height: 10vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+.projects-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.project-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.project-card h3, .project-card p {
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+} */
+
+
+/* :root {
+    --background-color: rgb(25, 25, 28);
+    --primary-color: rgb(194, 186, 186);
+    --secondary-color: rgb(81, 91, 92);
+    --navbar-height: 10vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbar-height);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    z-index: 1000;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.navbar-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    margin-top: 10px;
+    margin-left: 30px;
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 8px;
+    padding: 8px 15px;
+    border-radius: 13px;
+    font-size: 1rem;
+}
+
+nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-size: 1.01rem;
+}
+
+nav ul li:hover {
+    background-color: rgb(96, 143, 76);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .right.show {
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+    }
+} */
