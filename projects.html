@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdullah's Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="projects-style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleNav()">
+            &#9776;
+        </div>
+        <span class="left">
+            <img src="img_2.png" alt="Logo" class="navbar-logo">
+        </span>
+        <span class="left">Abdullah's Portfolio</span>
+        <div class="right" id="nav-items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#Projects">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Project # 1: <br> Text Files Search Engine</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A Text File Search Engine implemented in C++ which Search files efficiently from almost 1.5 million files.</p>
+                <div class="video-container">
+                    <video src="project_1.mp4" controls muted></video>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project # 1 <br> Prime Number Calculator</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A multi-threaded program to calculate prime numbers efficiently.</p>
+                <div class="video-container">
+                    <video src="project_2.mp4" controls muted></video>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project # 1 <br> Prime Number Calculator</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A multi-threaded program to calculate prime numbers efficiently.</p>
+                <div class="video-container">
+                    <video src="project_3.mp4" controls muted></video>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project # 1 <br> Prime Number Calculator</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A multi-threaded program to calculate prime numbers efficiently.</p>
+                <div class="video-container">
+                    <video src="project_4.mp4" controls muted></video>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project # 1 <br> Prime Number Calculator</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A multi-threaded program to calculate prime numbers efficiently.</p>
+                <div class="video-container">
+                    <video src="project_5.mp4" controls muted></video>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Project # 1 <br> Prime Number Calculator</h3>
+                <p>Start Date: January 2024</p>
+                <p>End Date: March 2024</p>
+                <p>Description: A multi-threaded program to calculate prime numbers efficiently.</p>
+                <div class="video-container">
+                    <video src="project_6.mp4" controls muted></video>
+                </div>
+            </div>
+            <!-- Add more project cards here  -->
+        </div>
+    </section>
+
+    <script>
+        let timeout;
+        function toggleNav() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                var navItems = document.getElementById('nav-items');
+                navItems.classList.toggle('show');
+            }, 300);
+        }
+
+        // Add hover play/pause functionality
+        document.querySelectorAll('.video-container video').forEach((video) => {
+            video.addEventListener('mouseenter', () => video.play());
+            video.addEventListener('mouseleave', () => video.pause());
+            video.addEventListener('click', () => video.play());
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdullah's Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="projects-style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleNav()">
+            &#9776;
+        </div>
+        <span class="left">
+            <img src="img_2.png" alt="Logo" class="navbar-logo">
+        </span>
+        <span class="left">Abdullah's Portfolio</span>
+        <div class="right" id="nav-items">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Projects">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        let timeout1;
+        function toggleNav() {
+            clearTimeout(timeout1);
+            timeout1 = setTimeout(() => {
+                var navItems = document.getElementById('nav-items');
+                navItems.classList.toggle('show');
+            }, 300);
+        }
+    </script>
+</body>
+
+</html> -->
