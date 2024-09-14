@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdullah's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger" aria-label="Menu" onclick="toggleNav()">
+            &#9776;
+        </div>
+        <span class="left">
+            <img src="img_2.png" alt="Logo" class="navbar-logo">
+        </span>
+        <span class="left">
+            Abdullah's Portfolio
+        </span>
+        <div class="right" id="nav-items">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="projects.html">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="firstSection">
+        <div class="rightSection">
+            <img id="my_pic" src="img_1.jpeg" alt="My Picture">
+        </div>
+        <div class="leftSection">
+            <h3><span id="name"></span></h3>
+        </div>
+    </section>
+    <hr id="firstline" />
+    <section class="secoundSection">
+        <div>
+            <h3>About me</h3>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#name', {
+            strings: ['Muhammad Abdullah Waheed, studying at ITU, pursuing a BS in Computer Science.'],
+            typeSpeed: 40,
+        });
+
+        let timeout;
+        function toggleNav() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                var navItems = document.getElementById('nav-items');
+                navItems.classList.toggle('show');
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
