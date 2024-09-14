@@ -1,12 +1,11 @@
 :root {
-    --background-color: rgb(25, 25, 28);
-    --primary-color: rgb(194, 186, 186);
+    --background-color: rgb(90, 90, 94);
+    --primary-color: rgb(221, 206, 206);
     --secondary-color: rgb(81, 91, 92);
-    --font-size: 16px;
     --navbar-height: 10vh;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +13,8 @@
 
 body {
     background-color: var(--background-color);
+    /* background: linear-gradient(rgba(131, 134, 138, 0.966),#5d4b3f, #4d4035, #6e6056); */
+    /* background: radial-gradient(circle, #2c2b2e, #5488a2, #a1a753, #684aad); */
     color: var(--primary-color);
     font-family: "Poppins", sans-serif;
 }
@@ -26,24 +27,25 @@ nav {
     padding: 1rem;
     position: sticky;
     top: 0;
+    margin-bottom: 10px;
     background-color: var(--background-color);
     z-index: 1000;
 }
 
 .hamburger {
     display: none;
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
     color: var(--primary-color);
 }
 
 .navbar-logo {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
-    margin-top: 10px;
-    margin-left: 30px;
+    margin-top: 11px;
+    margin-left: 0px;
     object-fit: cover;
 }
 
@@ -56,7 +58,6 @@ nav ul li {
     list-style: none;
     margin: 8px;
     padding: 8px 15px;
-    /* background-color: var(--secondary-color); */
     border-radius: 13px;
     font-size: 1rem;
 }
@@ -74,6 +75,46 @@ nav ul li a:hover {
 nav ul li:hover {
     background-color: rgb(96, 143, 76);
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display:block;
+        /* width: 50px;
+        height: 50px; */
+        font-size: 35px;
+    }
+
+    .right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .right.show {
+        display: flex;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 15px;
+        text-align: center;
+    }
 }
 
 .firstSection {
@@ -137,7 +178,6 @@ nav ul li:hover {
         pointer-events: none;
         transition: all 0.3s ease-in-out;
     }
-
     .left {
         width: 50vw;
         flex-direction: column;
