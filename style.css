@@ -114,6 +114,7 @@ nav ul li:hover {
         padding: 15px;
         text-align: center;
     }
+
 }
 
 .firstSection {
@@ -158,48 +159,6 @@ nav ul li:hover {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        width: 30px;
-        height: 30px;
-    }
-
-    .right {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--secondary-color);
-        position: absolute;
-        top: var(--navbar-height);
-        left: 0;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s ease-in-out;
-    }
-    .left {
-        width: 50vw;
-        flex-direction: column;
-        text-align: center;
-        font-size: 1.3rem;
-    }
-
-    .right.show {
-        display: flex;
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 15px;
-        text-align: center;
-    }
 
     .firstSection {
         display: flex;
