@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdullah's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger" aria-label="Menu" onclick="toggleNav()">
+            &#9776;
+        </div>
+        <span class="left">
+            <img src="img_2.png" alt="Logo" class="navbar-logo">
+        </span>
+        <span class="left">
+            <p>Abdullah's Portfolio</p>
+        </span>
+        <div class="right" id="nav-items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
+        <ul class="social-links">
+            <li><a href="https://www.linkedin.com/in/mabdullahwaheed/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+        </ul>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#name', {
+            strings: ['Muhammad Abdullah Waheed, studying at ITU, pursuing a BS in Computer Science.'],
+            typeSpeed: 40,
+        });
+
+        let timeout;
+        function toggleNav() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                var navItems = document.getElementById('nav-items');
+                navItems.classList.toggle('show');
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
