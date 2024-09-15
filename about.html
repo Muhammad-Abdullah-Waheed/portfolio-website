@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdullah's Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="about-style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleNav()">
+            &#9776;
+        </div>
+        <span class="left">
+            <img src="img_2.png" alt="Logo" class="navbar-logo">
+        </span>
+        <span class="left">Abdullah's Portfolio</span>
+        <div class="right" id="nav-items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        let timeout1;
+        function toggleNav() {
+            clearTimeout(timeout1);
+            timeout1 = setTimeout(() => {
+                var navItems = document.getElementById('nav-items');
+                navItems.classList.toggle('show');
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
