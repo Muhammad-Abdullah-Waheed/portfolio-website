@@ -1,7 +1,7 @@
 Peer opinion:
 
 1- Consider adding more prominent call-to-action buttons throughout your site, like ‘Hire Me’ or ‘Contact Me,’ to encourage 
-   visitors to reach out. You can place them after sections like Projects or Services.
+   visitors to reach out. You can place them after sections like Projects or Services. <-----(working on it)
 
 2- Your project videos are great, but adding some context with a short video or GIF preview of each project would help 
    users quickly understand what they’re about without having to watch the full video.

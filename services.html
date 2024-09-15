@@ -4,42 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Abdullah's Portfolio</title>
+    <title>Abdullah's Navbar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services-style.css">
 </head>
 
 <body>
     <nav>
-        <div class="hamburger" aria-label="Menu" onclick="toggleNav()">
+        <div class="hamburger" onclick="toggleNav()">
             &#9776;
         </div>
         <span class="left">
             <img src="img_2.png" alt="Logo" class="navbar-logo">
         </span>
-        <span class="left">
-            <p>Abdullah's Portfolio</p>
-        </span>
+        <span class="left">Abdullah's Portfolio</span>
         <div class="right" id="nav-items">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Projects">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    
+
+    <section class="services-section"></section>
+        <h2>My Services</h2>
+        <div class="services-container">
+            <div class="services-card">
+                <h3>Service # 1: <br> Teaching Assistant at ITU</h3>
+                <p>Start Date: August 2024</p>
+                <p>Expected End Date: January 2025</p>
+                <img src="" alt="">
+            </div>
+
+            <div class="services-card">
+                <h3>Service # 3: <br> Event management team memeber at Rover's club GCU,Lahore</h3>
+                <p>Start Date: September 2021</p>
+                <p>Expected End Date: August 2022</p>
+                <img src="" alt="">
+            </div>
+            <!-- Add more services cards here  -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
     <footer class="footer">
         <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
         <ul class="social-links">
@@ -52,17 +71,12 @@
 
 
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#name', {
-            strings: ['Muhammad Abdullah Waheed, studying at ITU, pursuing a BS in Computer Science.'],
-            typeSpeed: 40,
-        });
 
-        let timeout;
+    <script>
+        let timeout1;
         function toggleNav() {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
+            clearTimeout(timeout1);
+            timeout1 = setTimeout(() => {
                 var navItems = document.getElementById('nav-items');
                 navItems.classList.toggle('show');
             }, 300);
