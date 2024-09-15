@@ -1,0 +1,15 @@
+Peer opinion:
+
+1- Consider adding more prominent call-to-action buttons throughout your site, like ‘Hire Me’ or ‘Contact Me,’ to encourage 
+   visitors to reach out. You can place them after sections like Projects or Services.
+
+2- Your project videos are great, but adding some context with a short video or GIF preview of each project would help 
+   users quickly understand what they’re about without having to watch the full video.
+
+3- The navigation is easy to follow, but adding a sticky navigation bar could help users access different sections without
+   scrolling all the way up. It would improve overall usability, especially for longer pages. <----(solved)
+
+4- Your website has a clean and minimalistic design, which is great for readability. However, incorporating a few more 
+   vibrant colors or subtle animations could make it more visually engaging and dynamic without compromising its simplicity.
+     ^-------  (unfortunately i am absolute beginner in web developmenet and trying to learn most advance concepts after that insha allah
+   i will add animations too)
