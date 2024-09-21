@@ -35,20 +35,6 @@
     <section class="services-section"></section>
         <h2>My Services</h2>
         <div class="services-container">
-            <div class="services-card">
-                <h3>Service # 1: <br> Teaching Assistant at ITU</h3>
-                <p>Start Date: August 2024</p>
-                <p>Expected End Date: January 2025</p>
-                <img src="" alt="">
-            </div>
-
-            <div class="services-card">
-                <h3>Service # 3: <br> Event management team memeber at Rover's club GCU,Lahore</h3>
-                <p>Start Date: September 2021</p>
-                <p>Expected End Date: August 2022</p>
-                <img src="" alt="">
-            </div>
-            <!-- Add more services cards here  -->
         </div>
     </section>
 
@@ -70,9 +56,29 @@
 
 
 
+    <!-- Include the portfolio.js file first -->
+    <script src="portfolio.js"></script>
 
 
     <script>
+        function displayServices(){
+            const servicesHolder = document.querySelector(".services-container");
+            portfolioData["services"].forEach(service => {
+                const serviceCard = document.createElement('div');
+                serviceCard.classList.add('services-card');
+
+                serviceCard.innerHTML = `
+                    <h3>${service.title}</h3>
+                    <p>Start Date: ${service.startDate}</p>
+                    <p>Expected End Date: ${service.endDate}</p>
+                    <img src="${service.image}" alt="">
+                `;
+                servicesHolder.appendChild(serviceCard);
+            });
+        }
+
+        window.onload = displayServices;
+
         let timeout1;
         function toggleNav() {
             clearTimeout(timeout1);

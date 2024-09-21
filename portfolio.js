@@ -1,4 +1,18 @@
 const portfolioData = {
+  services: [
+    {
+      title: "Teaching Assistant at ITU",
+      startDate: "August 2024",
+      endDate: "January 2025",
+      imgSrc: "path/to/image1.jpg" 
+    },
+    {
+      title: "Event Management Team Member at Rover's Club GCU, Lahore",
+      startDate: "September 2021",
+      endDate: "August 2022",
+      imgSrc: "path/to/image2.jpg"
+    },
+  ],
   projects: [
     {
       title: "Text Files Search Engine",
