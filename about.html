@@ -4,21 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Abdullah's Navbar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
+    <title>About Me | Abdullah's Portfolio</title>
     <link rel="stylesheet" href="about-style.css">
 </head>
 
 <body>
     <nav>
-        <div class="hamburger" onclick="toggleNav()">
-            &#9776;
-        </div>
-        <span class="left">
-            <img src="img_2.png" alt="Logo" class="navbar-logo">
-        </span>
+        <div class="hamburger" onclick="toggleNav()">&#9776;</div>
+        <span class="left"><img src="img_2.png" alt="Logo" class="navbar-logo"></span>
         <span class="left">Abdullah's Portfolio</span>
         <div class="right" id="nav-items">
             <ul>
@@ -32,130 +25,19 @@
 
     <div class="container">
         <h1>About Me</h1>
-
-        <div class="section">
-            <h2>Introduction</h2>
-            <p>
-                My name is <strong>Muhammad Abdullah Waheed</strong>, and I am passionate about solving complex problems
-                and exploring new horizons in technology. While my primary goal is to excel in the field of data
-                science, I have developed a strong interest in web development and game development.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <p>
-                I am currently a 5th-semester Computer Science student at ITU Lahore. I did my intermidiate in Computer
-                Science from Government Collage University, Lahore (GCU) where i got A+ and also in matriculation i got
-                A+ grade. My academic journey has allowed me to work on various projects, and I've developed a keen understanding of C++, Python, and web development
-                technologies.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <p>
-                My key technical skills include:
-            </p>
-            <ul class="skills-list">
-                <li>C++
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </li>
-                <li>Python
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </li>
-                <li>HTML, CSS, JavaScript (Currently learning)
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div>
-                    </div>
-                </li>
-                <li>Problem-solving and algorithmic thinking
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-
-        <div class="section">
-            <h2>Experience</h2>
-            <p>
-                I am currently working as a Teaching Assistant (TA) at ITU and was part of the management team at GCU
-                Lahore Rover's Club, where I had the opportunity to work on multiple projects and collaborate with teams.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-            <p>
-                I have worked on several projects that showcase my diverse skills, including:
-            </p>
-            <ul class="projects-list">
-                <li>
-                    <i class="fas fa-search"></i> File Search Engine
-                </li>
-                <li>
-                    <i class="fas fa-paint-brush"></i> Paint Application
-                </li>
-                <li>
-                    <i class="fas fa-mobile-alt"></i> Fitness App (Flutter)
-                </li>
-                <li>
-                    <i class="fas fa-chess"></i> Chess, Ludo, Solitaire, Snake Games (C++ & Python)
-                </li>
-            </ul>
-
-            <p>Check out the videos of these projects in the Projects section of my portfolio!</p>
-        </div>
-
-        <div class="section">
-            <h2>Achievements</h2>
-            <p>
-                In 2014, I was honored with the <strong>Gold Medal</strong> by the President of Pakistan, Mr. Mamnoon
-                Hussain, for my outstanding performance in a scouting competition. This achievement remains a proud
-                milestone in my personal and academic journey.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Personal Values</h2>
-            <p>
-                My journey into technology began with a deep fascination for exploring how things work behind the
-                scenes. I believe in constantly learning and improving, driven by curiosity and a love for technology.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Goals</h2>
-            <p>
-                My long-term goal is to become an expert in the field of data science while continuing to explore web
-                and game development. I aim to contribute to innovative projects that push the boundaries of technology.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Interests</h2>
-            <p>
-                Outside of my professional interests, I enjoy playing sports such as cricket and football, which help me
-                stay active and focused.
-            </p>
-        </div>
-
-        <div class="contact">
-            <h1>Get in Touch</h1>
-            <div><a href="mailto:mabdullahwaheed127@gmail.com">Contact Me</a></div>
-        </div>
-
-
-
-
+        <div id="about-info"></div>
     </div>
 
+    <div class="contact">
+        <h1>Get in Touch</h1>
+        <div><a href="mailto:mabdullahwaheed127@gmail.com">Contact Me</a></div>
+    </div>
+
+
+    <!-- Include the portfolio.js file first -->
+    <script src="portfolio.js"></script>
+
+    
     <footer class="footer">
         <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
         <ul class="social-links">
@@ -166,11 +48,58 @@
     </footer>
 
     <script>
+        function populateAboutInfo(data) {
+            const aboutInfoDiv = document.getElementById('about-info');
+            aboutInfoDiv.innerHTML = `
+                <div class="section">
+                    <h2>Introduction</h2>
+                    <p>${data.introduction}</p>
+                </div>
+                <div class="section">
+                    <h2>Education</h2>
+                    <ul>${data.education.map(edu => `<li>${edu.degree} from ${edu.institution} ${edu.year} - ${edu.details}</li>`).join('')}</ul>
+                </div>
+                <div class="section">
+                    <h2>Courses</h2>
+                    <ul>${data.courses.map(course => `<li>${course.title} - ${course.provider} (${course.year})</li>`).join('')}</ul>
+                </div>
+                <div class="section">
+                    <h2>Skills</h2>
+                    <p>My key technical skills include:</p>
+                    <ul class="skills-list">${data.skills.map(skill => `<li>${skill.name} <div class="progress-bar"> <div class="progress" style="width: ${skill.proficiency}%;"></div></div></li>`).join('')}</ul>
+                </div>
+                <div class="section">
+                    <h2>Experience</h2>
+                    <ul>${data.experience.map(exp => `<li>${exp.position}, ${exp.institution || exp.company} (${exp.year}) - ${exp.responsibilities}</li>`).join('')}</ul>
+                </div>
+                <div class="section">
+                    <h2>Goals</h2>
+                    <p>${data.goals}</p>
+                </div>
+                <div class="section">
+                    <h2>Interests</h2>
+                    <p>${data.interests}</p>
+                </div>
+                <div class="section">
+                    <h2>Sports</h2>
+                    <ul>${data.sports.map(sport => `<li>${sport.name} - ${sport.level}: ${sport.details}</li>`).join('')}</ul>
+                </div>
+                <div class="section">
+                    <h2>Personal Values</h2>
+                    <p>${data.personalValues}</p>
+                </div>
+            `;
+        }
+
+        populateAboutInfo(portfolioData);
+    </script>
+
+    <script>
         let timeout1;
         function toggleNav() {
             clearTimeout(timeout1);
             timeout1 = setTimeout(() => {
-                var navItems = document.getElementById('nav-items');
+                const navItems = document.getElementById('nav-items');
                 navItems.classList.toggle('show');
             }, 300);
         }
