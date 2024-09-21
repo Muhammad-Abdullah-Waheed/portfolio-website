@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -49,32 +49,9 @@
         </div>
     </section>
     <hr id="firstline" />
-    
 
+    <section class="ayat-kursi-section"></section>
 
-    <section class="ayat-kursi-section">
-        <div class="content">
-            <h2>آیت الکرسی (Ayat al-Kursi)</h2>
-            <div class="arabic-text">
-                <p>
-                    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَهُ مَا فِي
-                    السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا
-                    بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ
-                    كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
-                </p>
-            </div>
-            <div class="urdu-translation">
-                <p>
-                    اللہ وہ ذات ہے جس کے سوا کوئی معبود نہیں، وہ زندہ اور سب کا تھامنے والا ہے، اسے نہ اونگھ آتی ہے نہ نیند،
-                    جو کچھ آسمانوں اور زمین میں ہے سب اسی کا ہے، کون ہے جو اس کی اجازت کے بغیر اس کے ہاں سفارش کر سکے، وہ
-                    جانتا ہے جو کچھ ان کے آگے ہے اور جو کچھ ان کے پیچھے ہے، اور وہ اس کے علم میں سے کسی چیز کا احاطہ نہیں
-                    کر سکتے سوائے اس کے جو وہ چاہے، اس کی کرسی آسمانوں اور زمین کو گھیرے ہوئے ہے، اور اسے ان دونوں کی
-                    حفاظت نہیں تھکاتی، اور وہ بلند اور عظمت والا ہے۔
-                </p>
-            </div>
-        </div>
-    </section>
-    
     <section class="poetry-section">
         <div class="content">
             <h2>شعر از علامه اقبال</h2>
@@ -96,18 +73,28 @@
             </div>
         </div>
     </section>
-    
-    <footer class="footer">
-        <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
-        <ul class="social-links">
-            <li><a href="https://www.linkedin.com/in/mabdullahwaheed/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
-        </ul>
-    </footer>
 
+    <footer class="footer"></footer>
 
+    <script src="portfolio.js"></script>
 
+    <script>
+        function ayatkursiprinter() {
+            const aytalkursiprint = document.querySelector(".ayat-kursi-section");
+            aytalkursiprint.innerHTML = `<div class="content">
+            <h2>آیت الکرسی (Ayat al-Kursi)</h2>
+            <div class="arabic-text">
+                <p>${portfolioData["aytalkursi"]["arabic"]}</p>
+            </div>
+            <div class="urdu-translation">
+                <p>
+                    ${portfolioData["aytalkursi"]["urdu"]}
+                </p>
+            </div>
+        </div>`;
+        }
+        ayatkursiprinter();
+    </script>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
