@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Abdullah's Projectszazz</title>
+    <title>Abdullah's Projects | Portfolio</title>
+
+    <meta name="description"
+        content="Abdullah's Portfolio showcasing a collection of projects including game development, software engineering, and more.">
+    <meta name="keywords" content="Abdullah, portfolio, projects, software development, games, C++, SFML">
+    <meta name="author" content="Muhammad Abdullah Waheed">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
@@ -30,103 +36,19 @@
         </div>
     </nav>
 
-    <section class="projects-section">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Project # 1: <br> Text Files Search Engine</h3>
-                <p>Start Date: December 2023</p>
-                <p>End Date: December 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7147643683901812738"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
+    <main>
+        <article class="projects-section">
+            <h2>My Projects</h2>
+            <div class="projects-container">
             </div>
+        </article>
+    </main>
 
 
 
-            <div class="project-card">
-                <h3>Project # 2 <br> Interactive Disk Operating System and Text Editor</h3>
-                <p>Start Date: November 2023</p>
-                <p>End Date: December 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7149376215827599360"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
 
-            <div class="project-card">
-                <h3>Project # 3 <br>Chess Game with SFML</h3>
-                <p>Start Date: October 2023</p>
-                <p>End Date: November 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146117299970764800"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-            </div>
 
-            <div class="project-card">
-                <h3>Project # 4 <br> Ludo Game with SFML</h3>
-                <p>Start Date: September 2023</p>
-                <p>End Date: October 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146122679765438464"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
 
-            <div class="project-card">
-                <h3>Project # 5 <br>Paint Brush Application</h3>
-                <p>Start Date: May 2023</p>
-                <p>End Date: june 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146212725994541056"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
-
-            <div class="project-card">
-                <h3>Project # 6 <br>Mini Excel Project in C++</h3>
-                <p>Start Date: April 2023</p>
-                <p>End Date: May 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7149369489959153665"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
-
-            <div class="project-card">
-                <h3>Project # 7 <br>Shogi game in c++</h3>
-                <p>Start Date: November 2022</p>
-                <p>End Date: December 2022</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146074766964174848"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
-
-            <div class="project-card">
-                <h3>Project # 8 <br>C++ Console Snake Game</h3>
-                <p>Start Date: Feb 2023</p>
-                <p>End Date: March 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146076699863027714"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
-
-            <div class="project-card">
-                <h3>Project # 9 <br>C++ Solitaire Game with SFML</h3>
-                <p>Start Date: January 2023</p>
-                <p>End Date: March 2023</p>
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7146130739762307072"
-                    height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post">
-                </iframe>
-            </div>
-
-            <div class="project-card">
-                <h3>Project # --- <br>Example vedio</h3>
-                <p>Start Date: None</p>
-                <p>End Date: None</p>
-                <p>Description: None</p>
-                <video src="v-1.mp4" controls height="500vh" width="100%"></video>
-            </div>
-            <!-- Add more project cards here  -->
-        </div>
-    </section>
-    
-    <a href="#" class="back-to-top">Back to Top</a>
     <script>
         let timeout;
         function toggleNav() {
@@ -136,77 +58,44 @@
                 navItems.classList.toggle('show');
             }, 300);
         }
-
-        // Add hover play/pause functionality
-        document.querySelectorAll('.video-container video').forEach((video) => {
-            video.addEventListener('mouseenter', () => video.play());
-            video.addEventListener('mouseleave', () => video.pause());
-            video.addEventListener('click', () => video.play());
-        });
     </script>
 
+    <!-- Include the portfolio.js file first -->
+    <script src="portfolio.js"></script>
 
+    <!-- Main script that uses the portfolioData object -->
+    <script>
+        function displayProjects() {
+            const projectsContainer = document.querySelector('.projects-container');
+            portfolioData["projects"].forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.classList.add('project-card');
 
+                projectCard.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p>Start Date: ${project.startDate}</p>
+                    <p>End Date: ${project.endDate}</p>
+                    <iframe src="${project.videoLink}" loading="lazy" height="500vh" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                `;
+
+                projectsContainer.appendChild(projectCard);
+            });
+        }
+
+        // Call the function when the page loads
+        window.onload = displayProjects;
+    </script>
+
+    <a href="#" class="back-to-top">Back to Top</a>
     <footer class="footer">
-        <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
-        <ul class="social-links">
-            <li><a href="https://www.linkedin.com/in/mabdullahwaheed/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
-        </ul>
+    <p>&copy; 2024 Muhammad Abdullah Waheed. All Rights Reserved.</p>
+    <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/mabdullahwaheed/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+        <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+    </ul>
     </footer>
+
 </body>
 
 </html>
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Abdullah's Navbar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="projects-style.css">
-</head>
-
-<body>
-    <nav>
-        <div class="hamburger" onclick="toggleNav()">
-            &#9776;
-        </div>
-        <span class="left">
-            <img src="img_2.png" alt="Logo" class="navbar-logo">
-        </span>
-        <span class="left">Abdullah's Portfolio</span>
-        <div class="right" id="nav-items">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#Projects">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <script>
-        let timeout1;
-        function toggleNav() {
-            clearTimeout(timeout1);
-            timeout1 = setTimeout(() => {
-                var navItems = document.getElementById('nav-items');
-                navItems.classList.toggle('show');
-            }, 300);
-        }
-    </script>
-</body>
-
-</html> -->
